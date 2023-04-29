@@ -1,13 +1,15 @@
 Interface
 =========
 
+.. image:: ../_static/Curve2SimpleArm.gif
+
 BRS Input and Settings
 ----------------------
 
 Enter BRS Input
-
+^^^^^^^^^^^^^^^
 Field Settings
-
+^^^^^^^^^^^^^^
   Term Field
     [bi,ti]
     [bi]
@@ -26,15 +28,15 @@ Field Settings
     [us]
 
 BRS Autopopulate Display
-
+^^^^^^^^^^^^^^^^^^^^^^^^
 Regex Pattern Output and Settings
 ---------------------------------
 
 Regex Pattern Output
-
+^^^^^^^^^^^^^^^^^^^^
 Color Set Output Toggle
-
+^^^^^^^^^^^^^^^^^^^^^^^
 Regex Syntax Toggle
-
+^^^^^^^^^^^^^^^^^^^
 Copy Result Button
-
+^^^^^^^^^^^^^^^^^^
