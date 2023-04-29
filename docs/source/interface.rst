@@ -39,11 +39,17 @@ Users can easily configure the appropriate BRS search query using the buttons to
 **Term Field** - This field button will deselect the "[ds]" button automatically if it is selected.  Only one Term Field index may be selected at a time, and the selection will automatically update the BRS Autopopulate Display and the Regex Pattern Output according to the selection.  The following indices are available:
 
  **[bi,ti]** - Basic and Translation Indices
+ 
  **[bi]** - Basic Index
+ 
  **[ti]** - Translation Index
+ 
  **[mi]** - Mark Index
+ 
  **[mn]** - Mark Non-Punctuated Index
+ 
  **[mp]** - Mark Punctuated Index
+ 
  **[pi]** - Pseudo Mark Index
     
 **Disclaimer Field** - This field button will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
