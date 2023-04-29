@@ -4,8 +4,8 @@ Interface
 .. image:: ../_static/BRS-Interface.png
 
 The BRS Translator interface is intended to be an intuitive tool that will provide features and settings that will help users translate common X-Search queries in BRS to the new regular Expression Syntax.  The Interface is has two main components: 
-  1. BRS Input and Settings
-  2. RegEx Pattern Output and Settings
+  **1. BRS Input and Settings**
+  **2. RegEx Pattern Output and Settings**
 
 BRS Input and Settings
 ----------------------
@@ -36,7 +36,7 @@ Field Settings
 
 Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields.  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti] and all live marks with the "not dead[ld]" button set to active; however, users can configure the query to any active set the interface allows.
 
-  Term Field
+  **Term Field**
     [bi,ti]
     [bi]
     [ti]
@@ -44,10 +44,10 @@ Users can easily configure the appropriate BRS search query using the buttons to
     [mn]
     [mp]
     [pi]
-  Disclaimer Field
-  Live Dead Field
-  Class Field
-    Class Input
+  **Disclaimer Field**
+  **Live Dead Field**
+  **Class Field**
+    *Class Input*
     [cc]
     [ic]
     [tc]
