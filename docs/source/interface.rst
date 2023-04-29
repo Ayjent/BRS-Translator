@@ -45,7 +45,7 @@ Field Settings
 
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
+.. image:: ../_static/BRSAutopopHighlight.png
 Next to the BRS Input box you will see the selected fields in the BRS Input and Settings section autopopulate the BRS syntax so that the user does not have to type it into the Input box.  This autopopulated text completes the BRS query that is translated in the Regex Pattern Settings and Output Section.  This autopopulated text will change as soon as the user changes the settings but changing the selected settings does not reset the input as shown:
 
 .. image:: ../_static/BRSAutopop.gif
