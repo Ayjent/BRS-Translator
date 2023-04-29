@@ -4,11 +4,12 @@ BRS Translator documentation!
 **BRS Translator** is an Application that allows users familiar with BRS syntax used 
 for pattern matching in X-Search to be able to convert BRS syntax into the a regular 
 expression based syntax used in the new Search application.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+It allows the user to ease the transition to the new syntax if they are struggling
+providing a tool to both assist and reinforce how to construct similar queries in 
+the new syntax.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`interface` and :doc:`usage` section for further information, including
+how to :ref:`import` to the New Search application.
 
 .. note::
 
