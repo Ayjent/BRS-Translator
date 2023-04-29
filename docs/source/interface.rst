@@ -1,11 +1,11 @@
 Interface
 =========
 
-.. image:: ../_static/BRS-Interface.png
+.. image:: ../_static/BRS-BRS-SetHighlight.png
 
 BRS Input and Settings
 ----------------------
-
+.. image:: ../_static/BRSInputHighlight.png
 The BRS Input and Settings are on the top of the Application Interface within the blue outline below the "BRS Translator" banner.  This section allows the user to select their BRS query settings based on the type of BRS query they want to perform.  The BRS Translator is currently capable of translating specific field types and queries and is not intended to be a complete translation tool for all BRS query types.
 
 It can handle pattern matching queries intended for the Basic Index [BI], Translation Index [TI], Mark Index [MI], Pseudo Mark Index[PI] using Truncation Operators (i.e., $, $n, ?, and *) and Pattern Matching by class (e.g., {V:2} or {D2:4}) or particular characters (e.g., {"szc"0:2} or {"ckqx"}).  This requires the Term Field to be selected.
