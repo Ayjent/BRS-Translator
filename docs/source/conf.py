@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'BRS Translator'
+copyright = '2023, Jay Besch'
+author = 'Jay Besch'
 
 release = '0.1'
-version = '0.1.0'
+version = '0.93'
 
 # -- General configuration
 
