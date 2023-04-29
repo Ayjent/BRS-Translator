@@ -56,9 +56,12 @@ Users can easily configure the appropriate BRS search query using the buttons to
 
 .. image:: ../_static/BRS-DSField.gif
 
-**Live Dead Field** 
-**Class Field**
-*Class Input*
+**Live Dead Field** - This field is displayed as a "not dead[ld]" button.  This setting is default selected.  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
+
+**Class Field** - This field will expand when selected and display a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index.  
+
+*Class Input* - The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
+
 [cc]
 [ic]
 [tc]
