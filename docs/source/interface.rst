@@ -36,7 +36,9 @@ Regex Pattern Output
 ^^^^^^^^^^^^^^^^^^^^
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
+
 .. image:: ../_static/ColorSetOuput.gif
+
 Regex Syntax Toggle
 ^^^^^^^^^^^^^^^^^^^
 Copy Result Button
