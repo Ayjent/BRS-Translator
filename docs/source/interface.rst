@@ -46,6 +46,7 @@ Field Settings
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRSAutopopHighlight.png
+
 Next to the BRS Input box you will see the selected fields in the BRS Input and Settings section autopopulate the BRS syntax so that the user does not have to type it into the Input box.  This autopopulated text completes the BRS query that is translated in the Regex Pattern Settings and Output Section.  This autopopulated text will change as soon as the user changes the settings but changing the selected settings does not reset the input as shown:
 
 .. image:: ../_static/BRSAutopop.gif
@@ -64,6 +65,7 @@ The Color Set Output is used to show how the syntax is combined to make argument
 
 Regex Syntax Toggle
 ^^^^^^^^^^^^^^^^^^^
+.. image:: ../_static/BRSSynTogHighlight.png
 
 The user may also toggle between different regular expression syntax queries to demonstrate a different way to pattern match not possible in BRS.  The Regex Syntax Toggle Button Indicates the current type of regular expression syntax displayed.  The "Accurate" state is a completely analogous translation to the BRS query syntax, while the "Broader" state is a demonstration of the '+' (i.e., 1 or more instances) and '*' (i.e., 0 or more instances) quantifiers in regular expressions that do not have equivalents in BRS but are powerful to avoid specific quantity limitations.  This demonstrates the how the toggle works:
 
