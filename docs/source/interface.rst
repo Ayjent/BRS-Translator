@@ -44,6 +44,9 @@ Field Settings
 
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: ../_static/BRSAutopop.gif
+
 Regex Pattern Output and Settings
 ---------------------------------
 
