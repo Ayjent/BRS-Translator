@@ -60,12 +60,15 @@ Users can easily configure the appropriate BRS search query using the buttons to
 
 **Class Field** - This field will expand when selected and display a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index.  
 
-*Class Input* - The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
+ **Class Input** - The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
 
-[cc]
-[ic]
-[tc]
-[us]
+ **[cc]** - Coordinated Class Index
+ 
+ **[ic]** - International Class Index
+ 
+ **[tc]** - Trademark Search Facility Classification Code Index
+ 
+ **[us]** - US Class Index
 
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
