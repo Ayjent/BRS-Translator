@@ -9,7 +9,7 @@ providing a tool to both assist and reinforce how to construct similar queries i
 the new syntax.
 
 Check out the :doc:`interface` and :doc:`usage` section for further information, including
-how to :ref:`import` to the New Search application.
+how to import to the New Search application.
 
 .. note::
 
