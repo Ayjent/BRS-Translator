@@ -1,7 +1,7 @@
 Interface
 =========
 
-.. image:: ../_static/Curve2SimpleArm.gif
+.. image:: ../_static/BRS-Interface.png
 
 BRS Input and Settings
 ----------------------
