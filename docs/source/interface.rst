@@ -40,7 +40,7 @@ Regex Pattern Output
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: ../_static/BRSInput.gif
+.. image:: ../_static/ColorSetOutput.gif
 
 Regex Syntax Toggle
 ^^^^^^^^^^^^^^^^^^^
