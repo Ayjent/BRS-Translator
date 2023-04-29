@@ -19,5 +19,6 @@ Contents
 
 .. toctree::
 
+   interface
    usage
    api
