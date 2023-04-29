@@ -53,9 +53,10 @@ Next to the BRS Input box you will see the selected fields in the BRS Input and 
 
 Regex Pattern Output and Settings
 ---------------------------------
-
+.. image:: ../_static/BRS-RegexPatSection.png
 Regex Pattern Output
 ^^^^^^^^^^^^^^^^^^^^
+.. image:: ../_static/BRSRegExOutputHighlight.png
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRSColorSetOutputHighlight.png
