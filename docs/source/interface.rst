@@ -36,26 +36,26 @@ Field Settings
 
 Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields.  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti] and all live marks with the "not dead[ld]" button set to active; however, users can configure the query to any active set the interface allows.
 
-  **Term Field**
-    [bi,ti]
-    [bi]
-    [ti]
-    [mi]
-    [mn]
-    [mp]
-    [pi]
+**Term Field**
+[bi,ti]
+[bi]
+[ti]
+[mi]
+[mn]
+[mp]
+[pi]
     
-  **Disclaimer Field** - This field will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
+**Disclaimer Field** - This field will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
 
 .. image:: ../_static/BRS-DSField.gif
 
-  **Live Dead Field**
-  **Class Field**
-    *Class Input*
-    [cc]
-    [ic]
-    [tc]
-    [us]
+**Live Dead Field** 
+**Class Field**
+*Class Input*
+[cc]
+[ic]
+[tc]
+[us]
 
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
