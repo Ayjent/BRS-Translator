@@ -30,6 +30,7 @@ Users should click on the Input next to "Enter BRS" and enter their BRS query.  
 
 Field Settings
 ^^^^^^^^^^^^^^
+.. image:: ../_static/BRSFieldSettHighlight.png
   Term Field
     [bi,ti]
     [bi]
