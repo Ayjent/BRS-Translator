@@ -73,3 +73,4 @@ The user may also toggle between different regular expression syntax queries to 
 
 Copy Result Button
 ^^^^^^^^^^^^^^^^^^
+.. image:: ../_static/BRSCopyHighlight.png
