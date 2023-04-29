@@ -8,6 +8,9 @@ BRS Input and Settings
 
 Enter BRS Input
 ^^^^^^^^^^^^^^^
+
+.. image:: ../_static/BRSInput.gif
+
 Field Settings
 ^^^^^^^^^^^^^^
   Term Field
