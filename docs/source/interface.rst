@@ -128,3 +128,5 @@ The user may also toggle between different regular expression syntax queries to 
 Copy Result Button
 ^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRS-CopySection.png
+
+The user can click on the "Copy Result" button and the Regex Pattern Output will be copied to the computer's clipboard.  You may paste (Ctrl+V) the Regex Pattern Output into the new search application.
