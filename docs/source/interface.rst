@@ -121,7 +121,7 @@ The Color Set Output is used to show how the syntax is combined to make argument
 
 Regex Syntax Toggle
 ^^^^^^^^^^^^^^^^^^^
-.. image:: ../_static/BRSSynTogHighlight.png
+.. image:: ../_static/BRS-RegexSynTogSection.png
 
 The user may also toggle between different regular expression syntax queries to demonstrate a different way to pattern match not possible in BRS.  The Regex Syntax Toggle Button Indicates the current type of regular expression syntax displayed.  The "Accurate" state is a completely analogous translation to the BRS query syntax, while the "Broader" state is a demonstration of the '+' (i.e., 1 or more instances) and '*' (i.e., 0 or more instances) quantifiers in regular expressions that do not have equivalents in BRS but are powerful to avoid specific quantity limitations.  This demonstrates the how the toggle works:
 
