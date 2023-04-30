@@ -22,4 +22,5 @@ Contents
 
    interface
    usage
+   reference
    api
