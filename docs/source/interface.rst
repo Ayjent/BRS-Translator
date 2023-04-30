@@ -61,6 +61,8 @@ The following indices are available:
 
 **Disclaimer Field** - This field button will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  
 
+.. image:: ../_static/BRS-DSSection.png
+
 This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
 
 .. image:: ../_static/BRS-DSField.gif
