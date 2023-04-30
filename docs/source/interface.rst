@@ -40,6 +40,8 @@ Users can easily configure the appropriate BRS search query using the buttons to
 
 **Term Field** - This field button will deselect the "[ds]" button automatically if it is selected.  Only one Term Field index may be selected at a time, and the selection will automatically update the BRS Autopopulate Display and the Regex Pattern Output according to the selection.  The following indices are available:
 
+.. image:: ../_static/BRS-TermFieldSection.png
+
  **[bi,ti]** - Basic and Translation Indices
  
  **[bi]** - Basic Index
@@ -53,14 +55,20 @@ Users can easily configure the appropriate BRS search query using the buttons to
  **[mp]** - Mark Punctuated Index
  
  **[pi]** - Pseudo Mark Index
-    
-**Disclaimer Field** - This field button will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
+
+**Disclaimer Field** - This field button will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  
+
+This demonstrates how the BRS Translator operates to handle the quoted input in the Regex Pattern Output when the disclaimer field is chosen:
 
 .. image:: ../_static/BRS-DSField.gif
 
 **Live Dead Field** - This field is displayed as a "not dead[ld]" button.  This setting is default selected.  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
 
+.. image:: ../_static/BRS-LiveDeadFieldSection.png
+
 **Class Field** - This field will expand when selected and display a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index.  
+
+.. image:: ../_static/BRS-ClassFieldSection.png
 
  **Class Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
 
