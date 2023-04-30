@@ -7,7 +7,7 @@ The BRS Translator interface is intended to be an intuitive tool that will provi
 
  1. :ref:`BRS Input and Settings`
  
- **2. RegEx Pattern Output and Settings**
+ 2. :ref:`Regex Pattern Output and Settings`
 
 
 BRS Input and Settings
