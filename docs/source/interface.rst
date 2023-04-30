@@ -25,7 +25,7 @@ Finally, any query built can be limited by both the Live Dead Field Selector and
 
 Enter BRS Input
 ^^^^^^^^^^^^^^^
-.. image:: ../_static/BRSInputHighlight.png
+.. image:: ../_static/BRS-InputSection.png
 
 Users should click on the Input next to "Enter BRS" and enter their BRS query.  The user input will automatically activate the BRS Autopopulate Display to the right of the Input based on the selected BRS Fields below the input and will also autopopulate the Regex Pattern Output as shown here:
 
