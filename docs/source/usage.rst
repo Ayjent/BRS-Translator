@@ -19,6 +19,7 @@ You may change the Regex Pattern Output's reguluar expression syntax from a dire
 "Broader" is more expansive regular expression syntax that identifies when the BRS Syntax the user has entered includes: 
 
    0 to some number of instances designation, such as "{v0:2}", and then finds 0 or more instances.
+   
    1 to some number of instances designation, such as "{v:2}", and then finds 1 or moreinstances.
 
 Exporting Search Query to New Search Application
