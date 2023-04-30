@@ -34,7 +34,7 @@ Users should click on the Input next to "Enter BRS" and enter their BRS query.  
 Field Settings
 ^^^^^^^^^^^^^^
 
-.. image:: ../_static/BRSFieldSetHighlight.png
+.. image:: ../_static/BRS-FieldSetSection.png
 
 Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields.  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti] and all live marks with the "not dead[ld]" button set to active; however, users can configure the query to any active set the interface allows.
 
