@@ -75,7 +75,7 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 
 Uppercase or lowercase may be used for non-digit classes.
  
-.. image:: ../_static/BRS-ClassFieldSection.png
+.. image:: ../_static/BRS-LiveDeadFieldSection.png
 
  
  **Class Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
