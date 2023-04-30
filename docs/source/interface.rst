@@ -72,11 +72,9 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 **Class Field** - This field will expand when selected and display a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index.
 
 Uppercase or lowercase may be used for non-digit classes.
-
-
+ 
 .. image:: ../_static/BRS-ClassFieldSection.png
-
-
+ 
  **Class Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
  
 The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
