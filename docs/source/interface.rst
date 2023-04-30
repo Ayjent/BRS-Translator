@@ -112,7 +112,9 @@ The Regex Pattern Output is the main Output display for the BRS Translator appli
 
  Whatever is shown in this display is what will be copied if you hit the "Copy Result" button, except any highlighting. 
 
-WARNING: The BRS Translator does not provide errors if the Regex Pattern Output is problematic or not appropriate for the new Search application.
+.. warning::
+
+ The BRS Translator does not provide errors if the Regex Pattern Output is problematic or not appropriate for the new Search application.
 
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
