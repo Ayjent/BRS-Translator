@@ -83,6 +83,8 @@ Uppercase or lowercase may be used for non-digit classes.
 .. warning::
  The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
 
+The following indices may be chosen:
+
  **[cc]** - Coordinated Class Index
  
  **[ic]** - International Class Index
