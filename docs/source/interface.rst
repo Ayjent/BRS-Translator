@@ -86,7 +86,7 @@ Regex Pattern Output and Settings
 
 Regex Pattern Output
 ^^^^^^^^^^^^^^^^^^^^
-.. image:: ../_static/BRSRegExOutputHighlight.png
+.. image:: ../_static/BRS-RegexPatOutputSection.png
 
 The Regex Pattern Output is the main Output display for the BRS Translator application and the exact syntax that can be copied into the new Search application.  
 
