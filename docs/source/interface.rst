@@ -38,11 +38,12 @@ Field Settings
 
 Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields.  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti] and all live marks with the "not dead[ld]" button set to active; however, users can configure the query to any active set the interface allows.
 
-**Term Field** - This field button will deselect the "[ds]" button automatically if it is selected.  Only one Term Field index may be selected at a time, and the selection will automatically update the BRS Autopopulate Display and the Regex Pattern Output according to the selection.  
+**Term Field** - This field button will deselect the "[ds]" button automatically if it is selected.  
+Only one Term Field index may be selected at a time, and the selection will automatically update the BRS Autopopulate Display and the Regex Pattern Output according to the selection.  
 
 .. image:: ../_static/BRS-TermFieldSection.png
 
- The following indices are available:
+The following indices are available:
 
  **[bi,ti]** - Basic and Translation Indices
  
