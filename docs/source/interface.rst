@@ -5,7 +5,7 @@ Interface
 
 The BRS Translator interface is intended to be an intuitive tool that will provide features and settings that will help users translate common X-Search queries in BRS to the new regular Expression Syntax.  The Interface is has two main components: 
 
- **1. :ref:`brs-input`**
+ **1. :ref:`brs-input` **
  
  **2. RegEx Pattern Output and Settings**
 
