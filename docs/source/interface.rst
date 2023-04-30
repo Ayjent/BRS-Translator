@@ -96,7 +96,7 @@ WARNING: The BRS Translator does not provide errors if the Regex Pattern Output 
 
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: ../_static/BRSColorSetOutputHighlight.png
+.. image:: ../_static/BRS-ColorSetOutputSection.png
 The Color Set Output is used to show how the syntax is combined to make arguments similar to BRS.  In the example below the Color Set Output demonstrates that the regular expression for 1 to 2 instances of a vowel (i.e., '{v:2}' in BRS) is represented by the orange highlight around '[aeiouy]{1,2}' and that the regular expression for 1 to 2 instances of 's' or 'z' (i.e., '{"sz":2} in BRS) is represented by the blue highlight around '[sz]{1,2}'.  The user may toggle the Color Set Output Toggle by clicking on the button as follows:
 
 .. image:: ../_static/ColorSetOutput.gif
@@ -111,4 +111,4 @@ The user may also toggle between different regular expression syntax queries to 
 
 Copy Result Button
 ^^^^^^^^^^^^^^^^^^
-.. image:: ../_static/BRSCopyHighlight.png
+.. image:: ../_static/BRS-CopySection.png
