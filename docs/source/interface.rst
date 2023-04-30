@@ -108,7 +108,9 @@ Regex Pattern Output
 
 The Regex Pattern Output is the main Output display for the BRS Translator application and the exact syntax that can be copied into the new Search application.  
 
-NOTE: Whatever is shown in this display is what will be copied if you hit the "Copy Result" button, except any highlighting. 
+.. note:: 
+
+ Whatever is shown in this display is what will be copied if you hit the "Copy Result" button, except any highlighting. 
 
 WARNING: The BRS Translator does not provide errors if the Regex Pattern Output is problematic or not appropriate for the new Search application.
 
