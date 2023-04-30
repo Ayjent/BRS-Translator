@@ -73,6 +73,7 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 
 Uppercase or lowercase may be used for non-digit classes.
 
+
 .. image:: ../_static/BRS-ClassFieldSection.png
 
 
