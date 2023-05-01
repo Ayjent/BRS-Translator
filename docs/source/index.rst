@@ -25,3 +25,4 @@ Contents
    interface
    usage
    reference
+   release-notes
