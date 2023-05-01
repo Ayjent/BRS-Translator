@@ -93,6 +93,12 @@ The following indices may be chosen:
  
  **[us]** - US Class Index
 
+The Class Input and selected index will also provide a warning if the input is invalid, as follows:  
+
+.. image:: ../_static/BRS-ClassValidSelection.gif
+
+This will not prevent the user from entering invalid Class Input and the BRS Autopopulate Display and Regex Pattern Output from updating.  
+
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRS-AutopopSection.png
