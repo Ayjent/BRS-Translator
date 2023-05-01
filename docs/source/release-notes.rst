@@ -1,17 +1,20 @@
-Release Notes v0.94
-===================
+Release Notes
+=============
+
+v0.94
+-----
 
 Class Field
------------
+^^^^^^^^^^^
 
 **Class Input** - When class input is not going to result in an acceptable query limited by class, the Class Field will contain a red shade to indicate the input is not acceptable.
 This will not prevent the BRS Autopopulate or Regex Pattern Output from reflecting the unacceptable syntax, and currently only checks against Coordinated Class and International Class matches.  Future versions will be context specific based on the selected class.
 
-Release Notes v0.93
-===================
+v0.93
+-----
 
 BRS Syntax Expansion
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 **Expanded Pattern Matching** - Improved Rules to handle: 
   
@@ -20,7 +23,7 @@ BRS Syntax Expansion
   Combination wildcards: '{!a+!d}', '{a+d}', '{!c+!d}', '{c+d}', etc.
 
 Reference Buttons
------------------
+^^^^^^^^^^^^^^^^^
 
 **About/Help Button** - Added button that creates expandable reference that: 
   
