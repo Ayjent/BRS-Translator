@@ -8,7 +8,7 @@ Class Field
 ^^^^^^^^^^^
 
 **Class Input** - When class input is not going to result in an acceptable query limited by class, the Class Field will contain a red shade to indicate the input is not acceptable.
-This will not prevent the BRS Autopopulate or Regex Pattern Output from reflecting the unacceptable syntax, and currently only checks against Coordinated Class and International Class matches.  Future versions will be context specific based on the selected class.
+This will not prevent the BRS Autopopulate or Regex Pattern Output from reflecting the unacceptable syntax, and currently only checks against Coordinated Class, International Class, and US Class matches.  This version is context specific based on the selected class, but does require additional input before it will recognize the change in the selected Class Field.
 
 v0.93
 -----
