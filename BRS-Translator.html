@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <div class="container">
+  <title>BRS to Regex Generator</title>
+  <script>
+    function updateRegex() {
+      // Create an array of colors for Color Set Output
+      var colors = ["#fcffa3", "#a3ffd9", "#a3b1ff", "#ffa3f6", "#ffa3a3", "#ffdca3"];
+      // Get the input value
+      var inputValue = document.getElementById("inputField").value.toLowerCase();
+      var inputValueQuote = document.getElementById("inputField").value.toLowerCase();
+      var firstChar = inputValueQuote.trim()[0];
+      var lastChar = inputValueQuote.trim()[inputValueQuote.trim().length -1];
+      
+      if (firstChar === '"' && lastChar === '"') {
+        var matchspace = inputValueQuote.trim().match(/^"[^"]+ +[^"]+"$/);
+        if (matchspace) {
+          var quoted = inputValueQuote;
+        } else {
+          var quoted = inputValueQuote.slice(1, -1);
+        }
+      }
+
+      // Translate BRS to regex
+      var regex = inputValue.replace(/\{a0:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{0,$1}</span>")
+      .replace(/\{a:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{1,$1}</span>")
+      .replace(/\{a(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{$1,$2}</span>")
+      .replace(/\{a(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{$1}</span>")
+      .replace(/\{a\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]</span>")
+      .replace(/\{!a\}/g, "<span class='colortog' style='background-color:#fcffa3'>[^a-z]</span>")
+      .replace(/\{c0:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{0,$1}</span>")
+      .replace(/\{c:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{1,$1}</span>")
+      .replace(/\{c(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{$1,$2}</span>")
+      .replace(/\{c(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{$1}</span>")
+      .replace(/\{c\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]</span>")
+      .replace(/\{!c\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[^b-df-hj-np-tv-z]</span>")
+      .replace(/\{d0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[0-9]{0,$1}</span>")
+      .replace(/\{d:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[0-9]{1,$1}</span>")
+      .replace(/\{d(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[0-9]{$1,$2}</span>")
+      .replace(/\{d(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[0-9]{$1}</span>")
+      .replace(/\{d\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[0-9]</span>")
+      .replace(/\{!d\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^0-9]</span>")
+      .replace(/\{e0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{0,$1}</span>")
+      .replace(/\{e:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{1,$1}</span>")
+      .replace(/\{e(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{$1,$2}</span>") 
+      .replace(/\{e(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{$1}</span>")
+      .replace(/\{e\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]</span>")
+      .replace(/\{!e\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^02468]</span>")
+      .replace(/\{m0:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{0,$1}</span>")
+      .replace(/\{m:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{1,$1}</span>")
+      .replace(/\{m(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{$1,$2}</span>")
+      .replace(/\{m(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{$1}</span>")
+      .replace(/\{o0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{0,$1</span>")
+      .replace(/\{o:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{1,$1}</span>")
+      .replace(/\{o(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{$1,$2}</span>") 
+      .replace(/\{o(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{$1}</span>") 
+      .replace(/\{o\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]</span>")
+      .replace(/\{!o\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^13579]</span>")
+      .replace(/\{v0:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{0,$1}</span>")
+      .replace(/\{v:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{1,$1}</span>")
+      .replace(/\{v(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{$1,$2}</span>")
+      .replace(/\{v(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{$1}</span>")
+      .replace(/\{v\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]</span>")
+      .replace(/\{!v\}/g, "<span class='colortog' style='background-color:#ffdca3'>[^aeiouy]</span>")
+      .replace(/\{"([^{}"]+)"0:(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{0,$2}</span>")
+      .replace(/\{"([^{}"]+)":(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{1,$2}</span>")
+      .replace(/\{"([^{}"]+)"(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{$2,$3}</span>")
+      .replace(/\{"([^{}"]+)"(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{$2}</span>")
+      .replace(/\{"([^{}"]+)"\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]</span>")
+      .replace(/\{!"([^{}"]+)"\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[^$1]</span>")
+      .replace(/\*/g, ".*")
+      .replace(/\$(\d+)/g, function(match, p1) { return "<span class='colortog' style='background-color:#ffa3a5'>\\S{0," + p1 + "}</span>"; })
+      .replace(/\$/g, "<span class='colortog' style='background-color:#ffa3a5'>\\S*</span>")
+      .replace(/\?/g, "<span class='colortog' style='background-color:#ffa3a5'>\\S{0:1}</span>")
+      .replace(/\{!m\}/g, "<span class='colortog' style='background-color:#bca3ff'>((?=\\S)\\W)</span>")
+      .replace(/\{a\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]</span>")
+      .replace(/\{d\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]</span>")
+      .replace(/\{a\+e\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z02468]</span>")
+      .replace(/\{e\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z02468]</span>")
+      .replace(/\{a\+o\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z13579]</span>")
+      .replace(/\{o\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z13579]</span>")
+      .replace(/\{c\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z0-9]</span>")
+      .replace(/\{d\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z0-9]</span>")
+      .replace(/\{c\+e\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z02468]</span>")
+      .replace(/\{e\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z02458]</span>")
+      .replace(/\{c\+o\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z13579]</span>")
+      .replace(/\{o\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z13579]</span>")
+      .replace(/\{c\+v\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z]</span>")
+      .replace(/\{v\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z]</span>")
+      .replace(/\{d\+v\}/g, "<span class='colortog' style='background-color:#bca3ff'>[aeiouy0-9]</span>")
+      .replace(/\{v\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[aeiouy0-9]</span>");
+      // Translate BRS to regexbetter
+      var regexbetter = inputValue.replace(/\*/g, ".*")
+      .replace(/\{a0:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]*</span>")
+      .replace(/\{a:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]+</span>")
+      .replace(/\{a(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{$1,$2}</span>")
+      .replace(/\{a(\d)\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]{$1}</span>")
+      .replace(/\{a\}/g, "<span class='colortog' style='background-color:#fcffa3'>[a-z]</span>")
+      .replace(/\{!a\}/g, "<span class='colortog' style='background-color:#fcffa3'>[^a-z]</span>")
+      .replace(/\{c0:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]*</span>")
+      .replace(/\{c:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]+</span>")
+      .replace(/\{c(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{$1,$2}</span>")
+      .replace(/\{c(\d)\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]{$1,$2}</span>")
+      .replace(/\{c\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[b-df-hj-np-tv-z]</span>")
+      .replace(/\{!c\}/g, "<span class='colortog' style='background-color:#ffa3f7'>[^b-df-hj-np-tv-z]</span>")
+      .replace(/\{d0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>\\d*</span>")
+      .replace(/\{d:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>\\d+</span>")
+      .replace(/\{d(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>\\d{$1,$2}</span>")
+      .replace(/\{d(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>\\d{$1}</span>")
+      .replace(/\{d\}/g, "<span class='colortog' style='background-color:#a3ffb8'>\\d</span>")
+      .replace(/\{!d\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^0-9]</span>")
+      .replace(/\{e0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]*</span>")
+      .replace(/\{e:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]+</span>")
+      .replace(/\{e(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{$1,$2}</span>") 
+      .replace(/\{e(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]{$1}</span>")
+      .replace(/\{e\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[02468]</span>")
+      .replace(/\{!e\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^02468]</span>")
+      .replace(/\{m0:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]*</span>")
+      .replace(/\{m:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]+</span>")
+      .replace(/\{m(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{$1,$2}</span>")
+      .replace(/\{m(\d)\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]{$1}</span>") 
+      .replace(/\{m\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]</span>")
+      .replace(/\{o0:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]*</span>")
+      .replace(/\{o:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]+</span>")
+      .replace(/\{o(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{$1,$2}</span>") 
+      .replace(/\{o(\d)\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]{$1}</span>") 
+      .replace(/\{o\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[13579]</span>")
+      .replace(/\{!o\}/g, "<span class='colortog' style='background-color:#a3ffb8'>[^13579]</span>")
+      .replace(/\{v0:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]*</span>")
+      .replace(/\{v:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]+</span>")
+      .replace(/\{v(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{$1,$2}</span>")
+      .replace(/\{v(\d)\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]{$1}</span>") 
+      .replace(/\{v\}/g, "<span class='colortog' style='background-color:#ffdca3'>[aeiouy]</span>")
+      .replace(/\{!v\}/g, "<span class='colortog' style='background-color:#ffdca3'>[^aeiouy]</span>")
+      .replace(/\{"([^{}"]+)"0:(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]*</span>")        
+      .replace(/\{"([^{}"]+)":(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]+</span>")
+      .replace(/\{"([^{}"]+)"(\d)\:(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{$2,$3}</span>")
+      .replace(/\{"([^{}"]+)"(\d)\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]{$2}</span>") 
+      .replace(/\{"([^{}"]+)"\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[$1]</span>")
+      .replace(/\{!"([^{}"]+)"\}/g, "<span class='colortog' style='background-color:#a3f6ff'>[^$1]</span>")
+      .replace(/\$(\d+)/g, function(match, p1) { return "<span class='colortog' style='background-color:#ffa3a5'>\\S{0," + p1 + "}</span>"; })
+      .replace(/\$/g, "<span class='colortog' style='background-color:#ffa3a5'>\\S*</span>")
+      .replace(/\?/g, "<span class='colortog' style='background-color:#ffa3a5'>\\S{0:1}</span>")
+      .replace(/\{!m\}/g, "<span class='colortog' style='background-color:#bca3ff'>((?=\\S)\\W)</span>")
+      .replace(/\{a\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]</span>")
+      .replace(/\{d\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z0-9]</span>")
+      .replace(/\{a\+e\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z02468]</span>")
+      .replace(/\{e\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z02468]</span>")
+      .replace(/\{a\+o\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z13579]</span>")
+      .replace(/\{o\+a\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z13579]</span>")
+      .replace(/\{c\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z0-9]</span>")
+      .replace(/\{d\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z0-9]</span>")
+      .replace(/\{c\+e\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z02468]</span>")
+      .replace(/\{e\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z02458]</span>")
+      .replace(/\{c\+o\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z13579]</span>")
+      .replace(/\{o\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[b-df-hj-np-tv-z13579]</span>")
+      .replace(/\{c\+v\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z]</span>")
+      .replace(/\{v\+c\}/g, "<span class='colortog' style='background-color:#bca3ff'>[a-z]</span>")
+      .replace(/\{d\+v\}/g, "<span class='colortog' style='background-color:#bca3ff'>[aeiouy0-9]</span>")
+      .replace(/\{v\+d\}/g, "<span class='colortog' style='background-color:#bca3ff'>[aeiouy0-9]</span>");     
+
+      // Get the LD checkbox value
+      var ldCheckbox = document.getElementById("ldCheckbox");
+      var ldValue = ldCheckbox.checked ? " AND LD:true" : "";
+      var ldValueBRS = ldCheckbox.checked ? " not dead[ld]" : "";
+      
+      // Get the DS checkbox value
+      var dsCheckbox = document.getElementById("dsCheckbox");
+      var dsValue = dsCheckbox.checked ? "DS:" : "";
+      var dsValueBRS = dsCheckbox.checked ? "[ds]" : "";
+      
+      // Get the term fields checkbox value
+      var termFieldsCheckbox = document.getElementById("termFieldsCheckbox");
+      var includeTermFields = termFieldsCheckbox.checked;
+
+      // Get the selected term field option value
+      var fieldRadio = document.querySelector('input[name="fieldRadio"]:checked');
+      var fieldValue = "";
+      var fieldValueBRS = "";
+      if (includeTermFields && fieldRadio) {
+        fieldValue = fieldRadio.value;
+        fieldValueBRS = fieldRadio.dataset.value2;
+      }
+
+      // Get the class fields checkbox value
+      var classFieldsCheckbox = document.getElementById("classFieldsCheckbox");
+      var includeClassFields = classFieldsCheckbox.checked;
+
+      // Get the selected classfield option value
+      var classfieldRadio = document.querySelector('input[name="classfieldRadio"]:checked');
+      var classinputField = document.getElementById("classinputField").value;
+      var classinputFieldBRS = document.getElementById("classinputField").value.trim().toLowerCase();
+      var classinputFieldBRSand = " and ";
+      var classfieldValue = "";
+      var classfieldValueBRS = "";
+      // BRS Class Input Parse
+      function parseclassFieldBRS(classinputFieldBRS) {
+        var classsubstrings = classinputFieldBRS.split(/\s+/);
+        var classBRSoutputString = "";
+        // If there is only one class substring, return it in quotes with no parens
+        if (classsubstrings.length === 1) {
+          return `"${classsubstrings[0]}"`;
+        }
+        // Build the class input for BRS output with quoutes, parens and "or" between class substrings
+        var classBRSoutputString = "(";
+        for (var i = 0; i < classsubstrings.length; i++) {
+          classBRSoutputString += `"${classsubstrings[i]}"`;
+          if (i < classsubstrings.length - 1) {
+            classBRSoutputString += " or ";
+          }
+        }
+        classBRSoutputString += ")";
+        return classBRSoutputString;
+      }      
+      if (includeClassFields && classfieldRadio && classinputField) {
+        // Add parentheses around classinputField in Regex Pattern if it contains whitespace between characters
+        classinputField = classinputField.toUpperCase().trim();
+        classfieldValue = classinputField.includes(" ") ? "(" + classinputField + ")" : classinputField;
+        classfieldValue = classfieldRadio.value + classfieldValue;
+
+        // Class Field in BRSDisplay
+        classfieldValueBRS = classinputFieldBRSand + parseclassFieldBRS(classinputFieldBRS);
+        //classfieldValueBRS = classinputFieldBRSand + classinputFieldBRS.includes(" ") ? classinputFieldBRSand + "(" + classinputFieldBRS + ")" : classinputFieldBRS;
+        classfieldValueBRS = classfieldValueBRS + classfieldRadio.dataset.value2;
+      }
+
+      // Generate the regex pattern
+      var regexPattern = new RegExp(regex);
+      var patternPrefix = (fieldValue ? fieldValue : "") + (dsValue ? dsValue : "");
+      var patternSuffix = (ldValue ? " " + ldValue : "") + (classfieldValue ? " " + classfieldValue : "");
+      if (firstChar === '"' && lastChar === '"') {
+        var regexDisplay = patternPrefix + quoted + patternSuffix;
+      } else {
+        var regexDisplay = patternPrefix + "/" + regex + "/" + patternSuffix;
+      }
+      // Update the regex display
+      document.getElementById("regexDisplay").innerHTML = regexDisplay;
+
+      // Generate the regexbetter pattern
+      var regexbetterPattern = new RegExp(regexbetter);
+      if (firstChar === '"' && lastChar === '"') {
+         var regexbetterDisplay = patternPrefix + quoted + patternSuffix;
+      } else {  
+        var regexbetterDisplay = patternPrefix + "/" + regexbetter + "/" + patternSuffix;
+      }
+      // Update the regex display
+      document.getElementById("regexbetterDisplay").innerHTML = regexbetterDisplay;
+
+      //Generate the BRS pattern suffix
+      var BRSDisplay = (fieldValueBRS ? fieldValueBRS : "") + (dsValueBRS ? dsValueBRS : "") + (ldValueBRS ? " " + ldValueBRS : "") + (classfieldValueBRS ? " " + classfieldValueBRS : "");
+
+      //Update the BRS display
+      document.getElementById("BRSDisplay").innerHTML = BRSDisplay;
+      
+    }
+
+  </script>
+</head>
+<body>
+  <h1><div>BRS Translator</div></h1>
+<div class="brs">
+  <label for="inputField">Enter BRS:</label>
+  <input type="text" id="inputField" oninput="updateRegex()" placeholder="Enter Legacy Search w/o fields" title="On Input Fields autopopulate on Right based on Selections Below">
+  <span id="BRSDisplay"></span>
+  <div>
+  <fieldset id="inline-block">   
+    <label for="termFieldsCheckbox" title="Toggle Field on/off">
+      <input type="checkbox" id="termFieldsCheckbox" class="styled-checkbox" onclick="updateRegex()" checked> 
+      <span>Term Field</span>
+    </label>
+    
+  <span id="term-result-checked" style="display:inline-block">
+    <input type="radio" id="bitiRadio" name="fieldRadio" value="CM:" data-value2="[bi,ti]" onclick="updateRegex()" checked title="Basic and Translation Indices">
+    <label for="bitiRadio">[bi,ti]</label>
+    
+    <input type="radio" id="biRadio" name="fieldRadio" value="WP:" data-value2="[bi]" onclick="updateRegex()" title="Basic Index">
+    <label for="biRadio">[bi]</label>
+
+    <input type="radio" id="tiRadio" name="fieldRadio" value="TL:" data-value2="[ti]" onclick="updateRegex()" title="Translation Index">
+    <label for="tiRadio">[ti]</label>
+ 
+    <input type="radio" id="miRadio" name="fieldRadio" value="WM:" data-value2="[mi]" onclick="updateRegex()" title="Mark Index">
+    <label for="miRadio">[mi]</label>
+    
+    <input type="radio" id="mnRadio" name="fieldRadio" value="WM:" data-value2="[mn]" onclick="updateRegex()" title="Mark Non-Punctuated Index">
+    <label for="mnRadio">[mn]</label>
+    
+    <input type="radio" id="mpRadio" name="fieldRadio" value="WM:" data-value2="[mp]" onclick="updateRegex()" title="Mark Punctuated Index">
+    <label for="mpRadio">[mp]</label>
+    
+    <input type="radio" id="piRadio" name="fieldRadio" value="PM:" data-value2="[pi]" onclick="updateRegex()" title="Pseudo Mark Index">
+    <label for="piRadio">[pi]</label>   
+  </span>
+   
+  </fieldset>
+  <fieldset id="ds-inline-block"> 
+    <label for="dsCheckbox" title="Toggle Disclaimer Field on/off">
+    <input type="checkbox" id="dsCheckbox" class="styled-checkbox" onclick="updateRegex()">
+    <span>[ds]</span>   
+    </label>
+    </fieldset>  
+  <fieldset id="ld-inline-block"> 
+    <label for="ldCheckbox" title="Toggle Field on/off">
+    <input type="checkbox" id="ldCheckbox" class="styled-checkbox" onclick="updateRegex()" checked>
+    <span>not dead[ld]</span>   
+    </label>
+  </fieldset>
+  </div> 
+  
+ <div>
+  <fieldset id="class-inline-block"> 
+    <label for="classFieldsCheckbox" title="Toggle Field on/off">
+      <input type="checkbox" id="classFieldsCheckbox" class="styled-checkbox" onclick="updateRegex()"><span>Class Field</span>
+    </label>
+    
+  <span id="class-result-checked" >
+    <label for="classinputField"></label>
+    <input type="text" id="classinputField" oninput="updateRegex()" placeholder="Enter class(es) (e.g., 009 A B)" title="No quotes or operators">
+  
+    <input type="radio" id="ccRadio" name="classfieldRadio" value=" AND CC:" data-value2="[cc]" onclick="updateRegex()" checked title="Coordinated Class Index">
+    <label for="ccRadio">[cc]</label>
+
+    <input type="radio" id="icRadio" name="classfieldRadio" value=" AND IC:" data-value2="[ic]" onclick="updateRegex()" title="International Class Index">
+    <label for="icRadio">[ic]</label>
+
+    <input type="radio" id="tcRadio" name="classfieldRadio" value=" AND PC:" data-value2="[tc]" onclick="updateRegex()" title="Trademark Search Facility Classification Code Index">
+    <label for="tcRadio">[tc]</label>
+ 
+    <input type="radio" id="usRadio" name="classfieldRadio" value=" AND US:" data-value2="[us]" onclick="updateRegex()" title="US Class Index">
+    <label for="usRadio">[us]</label>
+    </span>
+    </div>   
+</div>
+  
+</fieldset>
+  <fieldset class="brs">
+  <div>  
+  <h1 id="regex-pattern">Regex Pattern:</h1>
+  </div>
+  <div> 
+  <div class="result" id="regexDisplay"></div><button id="copy-button" title="Use Ctrl+V to Paste Elsewhere">Copy Result</button>
+    </div>
+    <div>
+    <div class="result" id="regexbetterDisplay"></div><button id="better-copy-button" title="Use Ctrl+V to Paste Elsewhere">Copy Result</button>
+    </div>  
+    <div>
+      <label for="togglecoloroutput" title="Toggle Colors in Regex Pattern">
+        <input type="checkbox" id="togglecoloroutput" class="styled-checkbox" onchange="updateRegex()" checked>
+        <span>Color Set Output</span>
+      </label>
+      <label for="regex-version" title="Toggle Accuracy of Regex Output"><input type="checkbox" id="regex-version" class="styled-checkbox" checked><span id="regex-accurate">Accurate</span><span id="regex-broad">Broader</span></label>
+      
+    </div>
+  </fieldset>
+</div>
+  </body>
+  <div class="sticky-element-l hidden">
+    <h2><a href="https://brs-translator.readthedocs.io/en/latest/index.html" target="_blank">Help Guide</a></h2>
+    <h2><a href="https://regex101.com/" target="_blank">Regex101</a></h2>
+    <h2>Field Reference</h2>  
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Field</th>
+        <th scope="col">Explanation</th>
+        <th scope="col">Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr title="This field combines the WM - Word Mark field, the PM - Pseudo Mark field, and the TL - Translation field into one field.  Equivalent of [bi,ti].">
+        <td>CM</td>
+        <td>Combined Mark</td>
+        <td>CM:/.*h[oa][uw]*t.*/</td>
+      </tr>
+      <tr title="This field combines the WM Word Mark field and the PM Pseudo Mark field into one field that provides for all word mark and pseudo mark searching. Equivalent to [bi]">
+        <td>WP</td>
+        <td>Word/Pseudo Mark</td>
+        <td>WP:/.*h[oa][uw]*t.*/</td>
+      </tr>
+      <tr title="This field includes the English equivalents of a word mark containing foreign language term(s). For example, the search TL:wolf may retrieve marks with the Italian equivalent to wolf, lupo, provided the text has been included in this TL field.  The TL search field also includes the text of the translation and transliteration statements. For example, a search of TL:transliterate will include in the results marks with a transliteration statement that includes the wording “The non-Latin characters in the mark transliterate to . . .”. ">
+        <td>TL</td>
+        <td>Translation</td>
+        <td>TL:/.*h[oa][uw]*t.*/</td>
+      </tr>
+      <tr title="Contains all word marks, in both punctuated and non-punctuated form">
+        <td>WM</td>
+        <td>Word Mark</td>
+        <td>WM:hot</td>
+      </tr>  
+      <tr title="This field provides for exact match searches. The entire mark may be searched, or specific portions may be searched with wildcards or regular expressions. There is no limit for the numbers of characters searched in the FM field.">
+        <td>FM</td>
+        <td>Full Mark</td>
+        <td>FM:"hot stuff"</td>
+      </tr>
+      <tr title="The field indicates whether a mark is alive or dead. Use this search field in conjunction with other searches to retrieve only live or dead records.">
+        <td>LD</td>
+        <td>Live Dead Indicator</td>
+        <td>LD:true</td>
+      </tr>
+      <tr title="This field includes words contained in a statement waiving exclusive rights to specific words or elements of a mark otherwise cannot be registered.">
+        <td>DS</td>
+        <td>Disclaimer</td>
+        <td>DS:Maryland</td>
+      </tr>
+      <tr>
+        <td>CC</td>
+        <td>Coordinated Class</td>
+        <td>CC:009</td>
+      </tr>
+      <tr>
+        <td>IC</td>
+        <td>International Class Class</td>
+        <td>IC:(009 A B 200)</td>
+      </tr>
+      <tr>
+        <td>PC</td>
+        <td>Pseudo Class</td>
+        <td>PC:009</td>
+      </tr>
+      <tr>
+        <td>US</td>
+        <td>US Class</td>
+        <td>US:022</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>Version: 0.94 by Jay Besch</div>
+</div>
+  <div class="sticky-element-r hidden">
+  <h2>RegEx Reference</h2>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Regex</th>
+        <th scope="col">Explanation</th>
+        <th scope="col">Examples</th>
+        <th scope="col">BRS Equivalent</th>
+      </tr>
+    </thead>
+    <tbody id="reftableBody" class="reftable">
+      <tr class="quantifier" id="plus">
+        <td class="quantifier"><b>+</b></td>
+        <td><b>1 or more</b> instances</td>
+        <td class="example">a<b>+</b>, [aeiouy]<b>+</b></td>
+        <td class="BRS-example">No equivalent.</td>
+      </tr>
+      <tr class="quantifier" id="star">
+        <td><b>*</b></td>
+        <td><b>0 or more</b> instances</td>
+        <td class="example">a<b>*</b>, [aeiouy]<b>*</b></td>
+        <td class="BRS-example">No equivalent.</td>
+      </tr>
+      <tr class="quantifier" id="curl-exact">
+        <td><b>{</b><i>n</i><b>}</b></td>
+        <td><b>exactly <i>n</i></b> instances</td>
+        <td class="example">a<b>{</b>2<b>}</b>, [aeiouy]<b>{</b>3<b>}</b></td>
+        <td class="BRS-example">{"a"2}, {v2}</td>
+      </tr>
+      <tr class="quantifier" id="curl-minmax">
+        <td><b>{</b><i>min</i><b>,</b><i>max</i><b>}</b></td>
+        <td><b><i>min</i> to <i>max</i></b> instances</td>
+        <td class="example">a<b>{</b>2<b>,</b>4<b>}</b>, [aeiouy]<b>{</b>0<b>,</b>3<b>}</b></td>
+        <td class="BRS-example">{"a"<b>2:4</b>}, {v<b>0:3</b>}</td>
+      </tr>
+      <tr class="matchifier" id="brackets">
+        <td><b>[</b>...<b>]</b></td>
+        <td>match any character inside</td>
+        <td class="example"><b>[</b>aeiouy<b>]</b>, <b>[</b>szc<b>]</b>, <b>[</b>gj<b>]</b></td>
+        <td class="BRS-example">{v}, {"szc"}, {"gj"}</td>
+      </tr>
+      <tr class="matchifier" id="not-brackets">
+        <td><b>[^</b>...<b>]</b></td>
+        <td>do not match characters inside</td>
+        <td class="example"><b>[^</b>aeiouy<b>]</b>, <b>[^</b>szc<b>]</b>, <b>[^</b>gj<b>]</b></td>
+        <td class="BRS-example">{!v}, {!"szc"}, {!"gj"}</td>
+      </tr>
+      <tr class="matchifier" id="parens">
+        <td><b>(</b>...<b>)</b></td>
+        <td>match character sequence inside</td>
+        <td class="example"><b>(</b>ion<b>)</b>, <b>(</b>pre<b>)</b>, <b>(</b>er<b>)</b></td>
+        <td class="BRS-example">*ion*, *pre*, *er*</td>
+      </tr>
+      <tr class="matchifier" id="period">
+        <td><b>.</b></td>
+        <td>match any character(including space)</td>
+        <td class="example"><b>.</b>*, <b>.</b>+, <b>.</b>{1,3}</td>
+        <td class="BRS-example">No equivalent.</td>
+      </tr>
+      <tr class="matchifier" id="s-notspace">
+        <td><b>\S</b></td>
+        <td>match any character(except space)</td>
+        <td class="example"><b>\S</b>*, <b>\S</b>+, <b>\S</b>{1,3}</td>
+        <td class="BRS-example">$ (internal), * (external) $3</td>
+      </tr>
+      <tr class="matchifier" id="w-better-notdigiword">
+        <td><b>((?=\S)\W)</b></td>
+        <td>match any non-letter and non-digit character(except space)</td>
+        <td class="example"><b>((?=\S)\W)</b>*, <b>((?=\S)\W)</b>+, <b>((?=\S)\W)</b>{1,3}</td>
+        <td class="BRS-example">{!m}</td>
+      </tr>
+      <tr class="matchifier" id="digits">
+        <td><b>\d</b></td>
+        <td>match any digit</td>
+        <td class="example"><b>\d</b>*, <b>\d</b>+, <b>\d</b>{1,3}</td>
+        <td class="BRS-example">{d}, {d1:3}</td>
+      </tr>
+      <tr class="matchifier" id="vowels">
+        <td><b>[aeiouy]</b></td>
+        <td>match any vowel</td>
+        <td class="example"><b>[aeiouy]</b>*, <b>[aeiouy]</b>+, <b>[aeiouy]</b>{1,3}</td>
+        <td class="BRS-example">{<b>v</b>}, {<b>v</b>1:3}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <button id="about-ref-button" title="Toggle About/Help">About/Help</button>
+  <button id="ref-button" title="Toggle Regular Expression Help">RegexRef</button>
+<script>
+    // Checkbox Behavior
+    const termcheckbox = document.getElementById('termFieldsCheckbox');
+    const dscheckbox = document.getElementById('dsCheckbox');
+    const classcheckbox = document.getElementById('classFieldsCheckbox');
+    const termResultChecked = document.getElementById('term-result-checked'); 
+    const classResultChecked = document.getElementById('class-result-checked');
+    const regexVersionChecked = document.getElementById('regex-version');
+    const regexResult = document.getElementById('regexDisplay');
+    const regexbetterResult = document.getElementById('regexbetterDisplay');
+    const copyButton = document.getElementById('copy-button');
+    const bettercopyButton = document.getElementById('better-copy-button');
+
+    // Term Field Checkbox Display Toggle
+    termcheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        termResultChecked.style.display = 'inline-block';
+        dscheckbox.checked = false;
+        updateRegex();
+      } else {
+        termResultChecked.style.display = 'none';
+      }
+    });
+    
+    // Disclaimer Display Toggle
+    dscheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        termResultChecked.style.display = 'none';
+        termcheckbox.checked = false;
+        updateRegex();
+      }
+    });
+  
+    // Class Field Checkbox Display Toggle
+    classcheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        classResultChecked.style.display = 'inline-block';
+      } else {
+        classResultChecked.style.display = 'none';
+      }
+    });
+  
+    // Regex Version Checkbox Display Toggle
+    regexVersionChecked.addEventListener('change', function() {
+      if (this.checked) {
+        regexResult.style.display = 'inline-block';
+        copyButton.style.display = 'inline-block';
+        regexbetterResult.style.display = 'none';
+        bettercopyButton.style.display = 'none';
+        document.getElementById("regex-accurate").style.display = "inline-block";
+        document.getElementById("regex-broad").style.display = "none";
+      } else {
+        regexResult.style.display = 'none';
+        copyButton.style.display = 'none';
+        regexbetterResult.style.display = 'inline-block';
+        bettercopyButton.style.display = 'inline-block';
+        document.getElementById("regex-accurate").style.display = "none";
+        document.getElementById("regex-broad").style.display = "inline-block";
+      }
+    });
+  
+    // Copy Results
+    copyButton.addEventListener('click', function() {
+      const textToCopy = regexResult.innerText;
+      navigator.clipboard.writeText(textToCopy);
+    });
+    bettercopyButton.addEventListener('click', function() {
+      const textToCopy = regexbetterResult.innerText;
+      navigator.clipboard.writeText(textToCopy);
+    });
+  
+  // Add event listener to togglecoloroutput checkbox
+document.getElementById("togglecoloroutput").addEventListener("change", function() {
+  // Get all elements with class 'colortog'
+  var colortogElements = document.querySelectorAll('.colortog');
+  
+  // If checkbox is unchecked, remove 'style' attribute from elements
+  if (!this.checked) {
+    for (var i = 0; i < colortogElements.length; i++) {
+      colortogElements[i].removeAttribute('style');
+    }
+  }
+});
+  
+// Listener to Display Warning if Class Input is Not Valid
+const redColor = "#de8d8d";
+const defaultColor = "#aba7a7";
+
+const classCCICacceptvalues = [
+  "001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016", "017", "018", "019", "020", "021", "022", "023", "024", "025", "026", "027", "028", "029", "030", "031", "032", "033", "034", "035", "036", "037", "038", "039", "040", "041", "042", "043", "044", "045", "A", "B", "200"
+];
+
+const classUSacceptvalues = [
+  "001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016", "017", "018", "019", "020", "021", "022", "023", "024", "025", "026", "027", "028", "029", "030", "031", "032", "033", "034", "035", "036", "037", "038", "039", "040", "041", "042", "043", "044", "045", "046", "047", "048", "049", "050", "051", "052", "100", "101", "102", "103", "104", "105", "106", "107", "A", "B", "200"
+];
+
+const classInputCheck = document.getElementById("classinputField");
+const classInputFieldset = document.getElementById("class-inline-block");
+const classfieldSelectRadio = document.getElementsByName("classfieldRadio");
+
+classInputCheck.addEventListener("input", function() {
+  const inputClassValue = classInputCheck.value.toUpperCase().trim().split(/\s+/);
+  let isValid = true;
+
+  if (inputClassValue.length === 0 || /^\s*$/.test(classInputCheck.value)) {
+    // No input, set default background color
+    classInputFieldset.style.backgroundColor = defaultColor;
+    return;
+  }
+
+  let selectedRadio = document.querySelector('input[name="classfieldRadio"]:checked').id;
+  let acceptValues;
+
+  if (selectedRadio === "ccRadio" || selectedRadio === "icRadio") {
+    acceptValues = classCCICacceptvalues;
+  } else if (selectedRadio === "tcRadio" || selectedRadio === "usRadio") {
+    acceptValues = classUSacceptvalues;
+  }
+
+  for (let b = 0; b < inputClassValue.length; b++) {
+    if (!acceptValues.includes(inputClassValue[b])) {
+      isValid = false;
+      break;
+    }
+  }
+  if (!isValid) {
+    classInputFieldset.style.backgroundColor = redColor;
+  } else {
+    classInputFieldset.style.backgroundColor = defaultColor;
+  }
+});
+
+  
+// Listener to Display Sticky Reference
+const refButton = document.getElementById("ref-button");
+const stickyElementR = document.querySelector(".sticky-element-r");
+//const body = document.querySelector('body');
+refButton.addEventListener("click", () => {
+  stickyElementR.classList.toggle("hidden");
+  //body.style.justifyContent = (body.style.justifyContent === "left") ? "center" : "left";
+});
+const fieldrefButton = document.getElementById("about-ref-button");
+const stickyElementL = document.querySelector(".sticky-element-l");
+//const body = document.querySelector('body');
+fieldrefButton.addEventListener("click", () => {
+  stickyElementL.classList.toggle("hidden");
+  //body.style.justifyContent = (body.style.justifyContent === "left") ? "center" : "left";
+});
+  </script>
+</html>
