@@ -66,7 +66,7 @@ Basic/Advanced Modes
 
 **Filters** - The three filters can be toggled on and off to modify the display of information in the Reference and are all set to on by default.  The filter groups represent the three main types of syntax - Quantifiers, Grouping, and Wildcards.
 
-  **Quantifiers** - Syntax that indicates how many instances of a specific pattern argument to match.  The pattern argument syntax is always first, and is followed by a quantifier (if a quantifier argument exists). 
+  **Quantifiers** - Syntax that indicates how many instances of a specific pattern argument to match.  The pattern argument syntax is always first, and is followed by a quantifier (if a quantifier exists). 
 
   The pattern arument/quantifier set always occurs like this: **[Pattern Argument][Quantifier]**.  For example, the pattern argument/quantifier set **a{1,3}** has **a** as the pattern argument and **{1,3}** as the quantifier - this set will pattern match 1 to 3 instances of the letter "a".   
   
@@ -74,4 +74,4 @@ Basic/Advanced Modes
   
   **Grouping** - Syntax that defines a pattern argument.  The grouping syntax can indicate to match one of a set of characters, to not match one of a set of characters, or match a sequence of characters.  Grouping syntax can also be used to make more complex pattern arguments that consist of several nested arguments.
   
-  Wildcards
+  **Wildcards** - Syntax that defines a pattern argument to match any character other than a space.  Wildcards work just like any other pattern argument in that you can create a pattern argument/quantifier set to designate the amount of instances of the argument you would like to match, or it will match exactly one if no quantifier exists.  In Elasticsearch syntax there is only one wildcard character, the period (or dot as it is commonly refered), **(.)**.  When the dot is used with a quantifier it can emulate all of the X-Search wildcards.
