@@ -19,12 +19,12 @@ Link to Help Guide
 
 A link to this documentation.
 
-Link to Regex101.com
-^^^^^^^^^^^^^^^^^^^^
+Link to Elasticsearch Reference
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A link to Regex101.com which is a very useful tool for understanding regular expressions and testing your syntax against character sequences and words.  
+A link to the Elasticsearch Reference which provides an overview of the syntax for understanding the Elasticsearch version of regular expressions (i.e., Elasticsearch does not adopt all of Perl Compatible Regular Expressions).  
 
-NOTE: Regex101.com does not utilize the fields that new Search application will utilize.
+NOTE: Elasticsearch Reference does not provide any guidance on how to utilize the fields that new Search application will utilize.
 
 Field Reference
 ^^^^^^^^^^^^^^^
