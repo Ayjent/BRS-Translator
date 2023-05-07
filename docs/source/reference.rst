@@ -2,7 +2,6 @@ Reference and Help
 ==================
 
 
-
 About/Help Button 
 -----------------
 
@@ -34,7 +33,7 @@ Field Reference
 
 The Field Reference displays a table of the new Search application fields, including the field syntax, the full name of the field, and an example of the syntax appropriate for that field.  These are just the fields that the BRS Translator will produce in the Regex Pattern Output, and does not include the entire list that the new Search application will utilize.
 
-.. _RegexRef:
+
 
 RegexRef Button
 ---------------
