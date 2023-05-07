@@ -7,7 +7,7 @@ copyright = '2023, Jay Besch'
 author = 'Jay Besch'
 
 release = '0.1'
-version = '0.93'
+version = '1.00'
 
 # -- General configuration
 
