@@ -1,10 +1,10 @@
 Reference and Help
 ==================
 
+.. _Help:
 
 About/Help Button 
 -----------------
-
 
 .. image:: ../_static/BRS-AboutHelpButton.png
 
@@ -33,7 +33,7 @@ Field Reference
 
 The Field Reference displays a table of the new Search application fields, including the field syntax, the full name of the field, and an example of the syntax appropriate for that field.  These are just the fields that the BRS Translator will produce in the Regex Pattern Output, and does not include the entire list that the new Search application will utilize.
 
-
+.. _RegexRef:
 
 RegexRef Button
 ---------------
@@ -50,7 +50,7 @@ On the top right margin, the BRS Translator has an "RegexRef" button that will t
 
 The Regex Reference Has Two Modes and Three Display Filters
 
-Basic/Advanced Modes
+Basic-Advanced Modes
 ^^^^^^^^^^^^^^^^^^^^
 
 **Basic** - This is the default Setting and will display only the essential Regex syntax for equivalence with X-Search's BRS syntax.  This mode is the analagoue to the "Accurate" Regex Output Display and can be used to review the "Accurate" results.
