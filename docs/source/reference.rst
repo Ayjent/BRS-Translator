@@ -42,7 +42,7 @@ RegexRef Button
 On the top right margin, the BRS Translator has an "RegexRef" button that will toggle a display that contains regular expression syntax references that may be displayed by the BRS Translator in the Regex Pattern Output.
 
 
-.. image:: ../_static/BRS-RegexRefFull.png
+.. image:: ../_static/BRS-RegexRefModeFilter.gif
 
 The Regex Reference Has Two Modes and Three Display Filters
 
@@ -51,7 +51,11 @@ Basic/Advanced Modes
 
 Basic - This is the default Setting and will display only the essential Regex syntax for equivalence with X-Search's BRS syntax.  This mode is the analagoue to the "Accurate" Regex Output Display and can be used to review the "Accurate" results.
 
+.. image:: ../_static/BRS-RegexRefBasic.png
+
 Advanced - This setting provides a more comprehensive list of Regex syntax that can be used for pattern matching in the new Search application.  This mode is the analogue to the "Broader" Regex Output Display and can be used to review the "Broader" results.
+
+.. image:: ../_static/BRS-RegexRefAdv.png
 
 Filters - The three filters can be toggled on and off to modify the display of information in the Reference and are all set to on by default.  The filter groups represent the three main types of syntax - Quantifiers, Grouping, and Wildcards.
 
