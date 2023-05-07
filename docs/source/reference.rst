@@ -11,8 +11,6 @@ About/Help Button
 On the top left margin, the BRS Translator has an "About/Help" button that will toggle a display that contains three essential references.
 
 
-.. image:: ../_static/BRS-AboutHelpFull.png
-
 
 Link to Help Guide
 ^^^^^^^^^^^^^^^^^^
