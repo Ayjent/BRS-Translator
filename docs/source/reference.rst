@@ -1,7 +1,7 @@
 Reference and Help
 ==================
 
-.. _Help:
+
 
 About/Help Button 
 -----------------
