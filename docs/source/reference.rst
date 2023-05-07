@@ -46,8 +46,6 @@ RegexRef Button
 On the top right margin, the BRS Translator has an "RegexRef" button that will toggle a display that contains regular expression syntax references that may be displayed by the BRS Translator in the Regex Pattern Output.
 
 
-.. image:: ../_static/BRS-RegexRefModeFilter.gif
-
 
 The Regex Reference Has Two Modes and Three Display Filters
 
