@@ -19,12 +19,12 @@ Link to Help Guide
 
 A link to this documentation.
 
-Link to Elasticsearch Reference
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Link to Elasticsearch Regex Rules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A link to the Elasticsearch Reference which provides an overview of the syntax for understanding the Elasticsearch version of regular expressions (i.e., Elasticsearch does not adopt all of Perl Compatible Regular Expressions).  
+A link to the Elasticsearch Regex Rules which provides an overview of the syntax for understanding the Elasticsearch version of regular expressions (i.e., Elasticsearch does not adopt all of Perl Compatible Regular Expressions).  
 
-NOTE: Elasticsearch Reference does not provide any guidance on how to utilize the fields that new Search application will utilize.
+.. note:: Elasticsearch Regex Rules link does not provide any guidance on how to utilize the fields that new Search application will utilize.
 
 Field Reference
 ^^^^^^^^^^^^^^^
