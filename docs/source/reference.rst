@@ -38,9 +38,3 @@ The Field Reference displays a table of the new Search application fields, inclu
 
 RegexRef Button
 ---------------
-
-
-.. image:: ../_static/BRS-RegexRefButton.png
-
-
-On the top right margin, the BRS Translator has an "RegexRef" button that will toggle a display that contains regular expression syntax references that may be displayed by the BRS Translator in the Regex Pattern Output.
