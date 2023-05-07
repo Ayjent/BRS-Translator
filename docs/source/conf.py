@@ -3,7 +3,6 @@
 # -- Project information
 
 project = 'BRS Translator'
-copyright = '2023, Jay Besch'
 author = 'Jay Besch'
 
 release = '0.1'
