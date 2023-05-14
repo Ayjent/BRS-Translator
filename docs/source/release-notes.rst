@@ -1,6 +1,18 @@
 Release Notes
 =============
 
+v1.00
+-----
+
+Field & RegEx Reference
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Added Expanded RegEx and Field References with Filters and 
+
+BugFix
+^^^^^^
+Fixed Character Replacement for BRS ?
+
 v0.94
 -----
 
