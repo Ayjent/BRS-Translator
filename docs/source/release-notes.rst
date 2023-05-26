@@ -1,6 +1,66 @@
 Release Notes
 =============
 
+v1.10
+
+Field & RegEx Reference
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Updated Content and Examples
+
+New Interface Features
+^^^^^^^^^^^^^^^^^^^^^^
+**Primary Field** - Determines The Main BRS Field Input (Only One Can Be Selected)
+
+Term Field
+  [bi,ti]
+  [bi]
+  [ti]
+  [mi]
+  [mn,mp]
+  [pi]
+  [fm]
+
+  **Advanced Field Search** - Toggles Display of Additional Search Fields to Use as Primary Field:
+    Disclaimer [ds]
+    Design Code [dc]
+    G/S Field [gs]
+    Status Field
+      [sn]
+      [rn]
+      [rg]
+    Filer Field
+      [on]
+      [ow]
+      [at]
+
+**Additional Field** - Determines Additional BRS Fields that Contain Operator to Indicate How this Field will be Used in Connection with Primary Field (Can Select 0 or all)
+
+Class Field
+  [cc]
+  [ic]
+  [tc]
+  [us]
+Live/Dead
+  live[ld]
+  dead[ld]
+  
+  **Advanced Field Search** - Toggles Display of Additional Search Field to Add Conditional Search
+  
+    G/S Field
+    
+**Automatic Detection of BRS that is Inside and Outside of RegEx** - The application has been programmed to recognize any BRS entry in either the Primary Field input or selected Additional Field Input that should be searched inside RegEx in the new system and recognizes syntax that should be search outside of RegEx (i.e., quotes or fields without RegEx).
+
+**Parsing of Multiple Search Statements** - The application has been programmed to recognize multiple search statements for a single field's input/
+
+**Automatic Operator Identification** - The application has been programmed to recognize operators and handle them accordingly with proper X4 Upper case syntax
+
+**Automatic Outer Parens** - The application upon recognizing multiple search statements in the field's input will automatically create outer parens for the user, that will appear on the edges of the input box, in the BRS Display, and in the X4 Query
+
+**Active Field Highlighting** - The active fields are now clearly designated with a light blue shade when selected and reflected by the same blue color in the BRS display window
+
+**Class Field Validation Warning** - Class Field will Turn Red if the Class Number/Letter is Unacceptable
+
 v1.00
 -----
 
