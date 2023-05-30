@@ -151,6 +151,7 @@ This will not prevent the user from entering invalid Class Input and the BRS Aut
 
 .. image:: ../_static/BRS-GSInputSection.png
 
+
  **G/S Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
  
 .. note::
