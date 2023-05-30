@@ -37,9 +37,16 @@ Field Settings
 
 .. image:: ../_static/BRS-FieldSetSection.png
 
-Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields.  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti] and all live marks with the "not dead[ld]" button set to active; however, users can configure the query to any active set the interface allows.
+Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields using a Primary Field and optional Additional Field(s).  The Enter BRS Input section is what the Primary Field defines and the user may select only one Primary Field  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti].  However, the user may click on the **Advanced Field Search** checkbox to display additional options for the Primary Field.  Selecting one of the Advanced Field Search options will automatically deselect the default option.   The default Additional Fiels is set to all live marks with the "Live/Dead" Field on the operator "AND" and the "live[ld]" button set to active; however, users can configure the query to any active set the interface allows.  Active Fields are indicated by the light blue background around the selection and a blue Field button. 
 
-**Term Field** - This field button will deselect the "[ds]" button automatically if it is selected.  
+.. note:: 
+
+All of the text input Fields will automatically handle complex search statements with parentheses, quotes, operators and wildcards.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.
+
+Primary Fields
+""""""""""""""
+
+**Term Field** - This field button will deselect any other Primary Field automatically if it is selected.  
 Only one Term Field index may be selected at a time, and the selection will automatically update the BRS Autopopulate Display and the Regex Pattern Output according to the selection.  
 
 .. image:: ../_static/BRS-TermFieldSection.png
@@ -60,7 +67,7 @@ The following indices are available:
  
  **[pi]** - Pseudo Mark Index
 
-**Disclaimer Field** - This field button will deselect the "Term Field" automatically when activated, and activating the "Term Field" will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS and utilizes quotes, so you should input the quotes in the BRS Input around the term(s) you wish to query in your Regex Pattern.  
+**Disclaimer [ds] Field** - This field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
 .. image:: ../_static/BRS-DSSection.png
 
@@ -68,20 +75,57 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 
 .. image:: ../_static/BRS-DSField.gif
 
-**Live Dead Field** - This field is displayed as a "not dead[ld]" button.  This setting is default selected.  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
+**Design Code [dc] Field** - This field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the design code field.  The Design Code [dc] Field does not use pattern matching in BRS, but can use wildcards *, ? and $.  
 
-.. image:: ../_static/BRS-LiveDeadFieldSection.png
+.. image:: ../_static/BRS-DSSection.png
 
-**Class Field** - This field will expand when selected and display a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index. 
+**G/S [gs] Field** - This goods/services field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the goods/services field.  The goods/services [gs] field does not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
+
+.. image:: ../_static/BRS-DSSection.png
+
+.. note::
+
+There is an Additional Field selection that you can use to limit a primary field that has its own input in the AdditionaL Field section of the Interface.
+
+**Status Field** - This Status Field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the Status Field.  The Status Field indices do not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
+
+.. image:: ../_static/BRS-DSSection.png
+
+The following indices are available:
+
+ **[sn]** - Serial Number Index (8 digits)
+ 
+ **[rn]** - Registration Number Index (7 digits)
+ 
+ **[rg]** - Register Index (one of 4 values - "Principal", "Principal-2(f)", "Principal-2(f)-in part", and "Supplemental") 
+
+**Filer Field** - This Filer Field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the Filer Field.  The Filer Field indices do not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
+
+.. image:: ../_static/BRS-DSSection.png
+
+The following indices are available:
+
+ **[on]** - Owner Name Index
+ 
+ **[ow]** - Owner Name and Address Index
+ 
+ **[at]** - Attorney of Record Index 
+
+Additional Fields
+"""""""""""""""""
+
+All Additional Fields contain an Operator drop-down selection next to the Field button, which is default "AND", but can be changed to "OR" or "NOT" depending on the user's preference.  Both the BRS Autopopulate Display and Regex X4 Query output will change based on the selected operator.
+
+**Class Field** - This field provides a Class Input where the user can specificy the particular class number(s) and/or letter(s) they wish to search and the specific Class Field Index. 
  
 .. image:: ../_static/BRS-ClassFieldSection.png
 
 Uppercase or lowercase may be used for non-digit classes.
  
- **Class Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
+ **Class Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.
  
-.. warning::
- The user should not add parentheses or operators and should enter the particular class or classes separated by a space (if there is more than one).  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
+.. note::
+ The user may add parentheses or operators in the input for multiple classes.  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.
 
 The following indices may be chosen:
 
@@ -99,23 +143,35 @@ The Class Input and selected index will also provide a warning if the input is i
 
 This will not prevent the user from entering invalid Class Input and the BRS Autopopulate Display and Regex Pattern Output from updating.  
 
+**Live Dead Field** - This field is has two options following the operator: **live[ld]** and **dead[ld]**.  This setting is default selected to "AND live[ld]" (i.e., will retrieve only live results). 
+
+.. image:: ../_static/BRS-LiveDeadFieldSection.png
+
+**G/S Field** - This field provides a G/S Input where the user can specify particular good(s) and/or service(s).  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
+
+ **G/S Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
+ 
+.. note::
+ The user may add wildcards and quotes in the input and may also add parentheses and operators for multiple goods/services.  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.
+
+
 BRS Autopopulate Display
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRS-AutopopSection.png
 
-Next to the BRS Input box you will see the selected fields in the BRS Input and Settings section autopopulate the BRS syntax so that the user does not have to type it into the Input box.  This autopopulated text completes the BRS query that is translated in the Regex Pattern Settings and Output Section.  This autopopulated text will change as soon as the user changes the settings but changing the selected settings does not reset the input as shown:
+Next to the BRS Input box you will see the selected fields in the BRS Input and Settings section autopopulate the BRS syntax so that the user does not have to type it into the Input box.  This autopopulated text has a light blue highlight corresponding to the selected fields and completes the BRS query that is translated in the X4 Query Settings and Output Section.  This autopopulated text will change as soon as the user changes the settings but changing the selected settings does not reset the input as shown:  
 
 .. image:: ../_static/BRSAutopop.gif
 
-Regex Pattern Output and Settings
+X4 Query Output and Settings
 ---------------------------------
 .. image:: ../_static/BRS-RegexPatSection.png
 
-Regex Pattern Output
+X4 Query Output
 ^^^^^^^^^^^^^^^^^^^^
 .. image:: ../_static/BRS-RegexPatOutputSection.png
 
-The Regex Pattern Output is the main Output display for the BRS Translator application and the exact syntax that can be copied into the new Search application.  
+The X4 Query Output is the main Output display for the BRS Translator application and the exact syntax that can be copied into the new X4 application.  This output automatically assesses the BRS input and determines the appropriate way to handle the translation and whether to apply RegEx.  The application is set to apply RegEx to any BRS search statement that contains pattern matching or wildcards.  
 
 .. note:: 
 
@@ -123,7 +179,7 @@ The Regex Pattern Output is the main Output display for the BRS Translator appli
 
 .. warning::
 
- The BRS Translator does not provide errors if the Regex Pattern Output is problematic or not appropriate for the new Search application.
+ The BRS Translator does not provide errors if the X4 Query Output is problematic or not appropriate for the new X4 application.
 
 Color Set Output Toggle
 ^^^^^^^^^^^^^^^^^^^^^^^
