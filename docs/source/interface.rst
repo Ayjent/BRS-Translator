@@ -77,11 +77,11 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 
 **Design Code [dc] Field** - This field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the design code field.  The Design Code [dc] Field does not use pattern matching in BRS, but can use wildcards *, ? and $.  
 
-.. image:: ../_static/BRS-DSSection.png
+.. image:: ../_static/BRS-DCSection.png
 
 **G/S [gs] Field** - This goods/services field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the goods/services field.  The goods/services [gs] field does not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
-.. image:: ../_static/BRS-DSSection.png
+.. image:: ../_static/BRS-GSSection.png
 
 .. note::
 
@@ -89,7 +89,7 @@ There is an Additional Field selection that you can use to limit a primary field
 
 **Status Field** - This Status Field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the Status Field.  The Status Field indices do not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
-.. image:: ../_static/BRS-DSSection.png
+.. image:: ../_static/BRS-StatusFieldSection.png
 
 The following indices are available:
 
@@ -101,7 +101,7 @@ The following indices are available:
 
 **Filer Field** - This Filer Field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the Filer Field.  The Filer Field indices do not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
-.. image:: ../_static/BRS-DSSection.png
+.. image:: ../_static/BRS-FilerFieldSection.png
 
 The following indices are available:
 
