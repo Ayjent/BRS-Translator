@@ -147,7 +147,9 @@ This will not prevent the user from entering invalid Class Input and the BRS Aut
 
 .. image:: ../_static/BRS-LiveDeadFieldSection.png
 
+
 **G/S Field** - This field provides a G/S Input where the user can specify particular good(s) and/or service(s).  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
+
 
 .. image:: ../_static/BRS-GSInputSection.png
 
