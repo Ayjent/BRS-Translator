@@ -149,6 +149,8 @@ This will not prevent the user from entering invalid Class Input and the BRS Aut
 
 **G/S Field** - This field provides a G/S Input where the user can specify particular good(s) and/or service(s).  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
 
+.. image:: ../_static/BRS-GSInputSection.png
+
  **G/S Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
  
 .. note::
