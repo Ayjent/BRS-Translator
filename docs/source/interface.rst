@@ -41,7 +41,11 @@ Users can easily configure the appropriate BRS search query using the buttons to
 
 .. image:: ../_static/BRS-PrimaryAdvancedField.gif
 
-The default Additional Fields is set to all live marks with the "Live/Dead" Field on the operator "AND" and the "live[ld]" button set to active; however, users can configure the query to any active set the interface allows.  Active Fields are indicated by the light blue background around the selection and a blue Field button. 
+The default Additional Fields is set to all live marks with the "Live/Dead" Field on the operator "AND" and the "live[ld]" button set to active; however, users can configure the query to any active set the interface allows.  Here the user selects Advanced Field Search and then activates all Additional Fields:
+
+.. image:: ../_static/BRS-AdditionalAdvancedField.gif
+
+Active Fields are indicated by the light blue background around the selection and a blue Field button. 
 
 .. note:: 
 
