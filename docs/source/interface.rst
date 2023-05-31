@@ -95,6 +95,7 @@ This demonstrates how the BRS Translator handles design code input with and with
 
 .. image:: ../_static/BRS-GSSection.png
 
+
 .. note::
 
 There is an Additional Field selection that you can use to limit a primary field that has its own input in the AdditionaL Field section of the Interface.
