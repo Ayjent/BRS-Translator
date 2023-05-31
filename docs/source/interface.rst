@@ -87,6 +87,10 @@ This demonstrates how the BRS Translator operates to handle the quoted input in 
 
 .. image:: ../_static/BRS-DCSection.png
 
+This demonstrates how the BRS Translator handles design code input with and without wildcards:
+
+.. image:: ../_static/BRS-DCField.gif
+
 **G/S [gs] Field** - This goods/services field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the goods/services field.  The goods/services [gs] field does not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
 .. image:: ../_static/BRS-GSSection.png
