@@ -1,6 +1,8 @@
 Reference and Help
 ==================
 
+On the right side of the webpage there are 3 buttons that will expand when selected.  The buttons consist of two interactive reference charts and a display containing useful links to additional resources and this manual.
+
 .. _RegexRef:
 
 RegexRef Button
@@ -43,6 +45,39 @@ Basic-Advanced Modes
   
   **Wildcards** - Syntax that defines a pattern argument to match any character other than a space.  Wildcards work just like any other pattern argument in that you can create a pattern argument/quantifier set to designate the amount of instances of the argument you would like to match, or it will match exactly one if no quantifier exists.  In Elasticsearch syntax there is only one wildcard character, the period (or dot as it is commonly refered), **(.)**.  When the dot is used with a quantifier it can emulate all of the X-Search wildcards.
 
+.. _FieldRef:
+
+FieldRef Button
+---------------
+
+.. image:: ../_static/BRS-FieldRefButton.png
+
+.. image:: ../_static/BRS-FieldRefModeFilter.gif
+
+
+The Field Reference Has Two Modes and Six Display Filters.
+
+Common-Detailed Modes
+^^^^^^^^^^^^^^^^^^^^^
+
+**Common** - This is the default setting and will display the most common Fields that Examining Attorneys will use in X4 search queries.  The table includes Legacy X-Search Statements and their equivalents in X4 as examples.
+
+**Detailed** - This setting includes more fields that may also be used by Examining Attorneys, but does not include the comprehensive list of Fields in the X4 system.
+
+**Filters** -  The six filters can be toggled on and off to modify the display of information in the Reference and are all set to on by default.  The filter groups represent categories of fields based on the data they retrieve.
+
+ **Term** - These fields relate to the mark in the record, including translations, pseudo-marks, and full marks.
+ 
+ **Drawing** - These fields relate to the drawing and drawing description.
+ 
+ **Status** - These fields relate to the assigned Serial Number, Registration Number, Register, and Live/Dead status.
+ 
+ **Distinct** - These fields relate to distinctiveness considerations.
+ 
+ **ID Class** - These fields relate to the identification of goods/services and classes.
+ 
+ **Filer** - These fields relate to the owner of the mark and the attorney of record.
+
 .. _Help:
 
 About/Help Button 
@@ -69,9 +104,3 @@ A link to the Elasticsearch Regex Rules which provides an overview of the syntax
 
 .. note:: 
   Elasticsearch Regex Rules link does not provide any guidance on how to utilize the fields that new Search application will utilize.
-
-
-Field Reference
-^^^^^^^^^^^^^^^
-
-The Field Reference displays a table of the new Search application fields, including the field syntax, the full name of the field, and an example of the syntax appropriate for that field.  These are just the fields that the BRS Translator will produce in the Regex Pattern Output, and does not include the entire list that the new Search application will utilize.
