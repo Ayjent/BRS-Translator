@@ -28,7 +28,7 @@ Enter BRS Input
 ^^^^^^^^^^^^^^^
 .. image:: ../_static/BRS-InputSection.png
 
-Users should click on the Input next to "Enter BRS" and enter their BRS query.  The user input will automatically activate the BRS Autopopulate Display to the right of the Input based on the selected BRS Fields below the input and will also autopopulate the Regex Pattern Output as shown here:
+Users should click on the Input next to "Enter BRS" and enter their BRS query.  The user input will automatically identify the operators "AND", "OR" and "NOT" and add parentheses if the input contains multiple search statements for the primary field.  The input is case insensitive. The user input will autopopulate the X4 Query Output as shown here:
 
 .. image:: ../_static/BRSInput.gif
 
