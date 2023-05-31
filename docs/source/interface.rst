@@ -37,7 +37,11 @@ Field Settings
 
 .. image:: ../_static/BRS-FieldSetSection.png
 
-Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields using a Primary Field and optional Additional Field(s).  The Enter BRS Input section is what the Primary Field defines and the user may select only one Primary Field  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti].  However, the user may click on the **Advanced Field Search** checkbox to display additional options for the Primary Field.  Selecting one of the Advanced Field Search options will automatically deselect the default option.   The default Additional Fiels is set to all live marks with the "Live/Dead" Field on the operator "AND" and the "live[ld]" button set to active; however, users can configure the query to any active set the interface allows.  Active Fields are indicated by the light blue background around the selection and a blue Field button. 
+Users can easily configure the appropriate BRS search query using the buttons to activate the desired fields using a Primary Field and optional Additional Field(s).  The Enter BRS Input section is what the Primary Field defines and the user may select only one Primary Field  The default setting is to find BRS pattern matching using the Term Field's Basic Index and Translation Index [bi,ti].  However, the user may click on the **Advanced Field Search** checkbox to display additional options for the Primary Field.  Selecting one of the Advanced Field Search options will automatically deselect the default option.   
+
+.. image:: ../_static/BRS-PrimaryAdvancedField.gif
+
+The default Additional Fields is set to all live marks with the "Live/Dead" Field on the operator "AND" and the "live[ld]" button set to active; however, users can configure the query to any active set the interface allows.  Active Fields are indicated by the light blue background around the selection and a blue Field button. 
 
 .. note:: 
 
