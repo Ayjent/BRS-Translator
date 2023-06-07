@@ -7,7 +7,9 @@ Entering BRS Syntax
 -------------------
 
 To use BRS Translator you do not need to enter any fields, such as [bi,ti] or operators, such as "and", "adj", and "or", into the BRS Input.  
-However, the field settings you have active will dictate what is an appropriate entry in the BRS Input and whether the output of the Regex Pattern Output is a valid query in the new Search application.
+However, the field settings you have selected as active will dictate what is an appropriate entry in the BRS Input and whether the output of the Regex Pattern Output is a valid query in the new Search application.
+
+The primary field setting dictates the field that will be searched in the "BRS Input" section and will be reflected with the first Field Tag in the BRS Autopopulate Display next to the "BRS Input" in a light blue color.  You may further filter your results by selecting the additional field settings with class fields, live/dead status, and the goods/services field.  The selected additional fields will show up in the BRS Autopopulate Display.  Note that the Class Fields and G/S Field require input before showing up in the BRS Autopopulate Display.
 
 Changing Search Query Regex Syntax
 ----------------------------------
