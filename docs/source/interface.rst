@@ -69,11 +69,11 @@ The following indices are available:
  
  **[mi]** - Mark Index
  
- **[mn]** - Mark Non-Punctuated Index
- 
- **[mp]** - Mark Punctuated Index
+ **[mn,mp]** - Mark Non-Punctuated and Mark Punctuated Index
  
  **[pi]** - Pseudo Mark Index
+ 
+ **[fm]** - Full Mark
 
 **Disclaimer [ds] Field** - This field button will deselect any other Primary Field selected automatically when activated, and activating any other Primary Field will automatically deselect the disclaimer field.  The disclaimer field/index [ds] does not use pattern matching in BRS, but can use wildcards *, ? and $ and can utilize quotes, so you should input the quotes in the BRS Input if you wish to query multiple terms separated by space in your Regex Pattern.  
 
@@ -161,16 +161,16 @@ This will not prevent the user from entering invalid Class Input and the BRS Aut
 .. image:: ../_static/BRS-LiveDeadFieldSection.png
 
 
-**G/S Field** - This field provides a G/S Input where the user can specify particular good(s) and/or service(s).  When selected the query will retrieve only live results.  When it is not selected it will return both live and dead results.
+**G/S Field** - This field provides a G/S Input where the user can specify particular good(s) and/or service(s).  When selected the query will retrieve results based on the combination of the field operator (selected via dropdown) and the specified good(s) and/or service(s).  
 
 
 .. image:: ../_static/BRS-GSInputSection.png
 
 
- **G/S Input** - This will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the input field.  
+ **G/S Input** - The G/S Field if selected will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the G/S Input.  The G/S Input will automatically handle the operators **and**, **or**, and **not** that are manually entered by the user between goods and/or services.
  
 .. note::
- The user may add wildcards and quotes in the input and may also add parentheses and operators for multiple goods/services.  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.
+ The user may add wildcards and quotes in the input and may also add parentheses and operators for multiple goods/services.  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.  Operator terms **and**, **or**, and **not** when entered manually within quotes will not be handled as operators.
 
 
 BRS Autopopulate Display
