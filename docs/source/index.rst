@@ -15,7 +15,7 @@ how to import to the New Search application.
 
 .. note::
 
-   This project is under active development.  Current version is 0.94.
+   This project is under active development.  Current version is 1.10.
 
 Contents
 --------
