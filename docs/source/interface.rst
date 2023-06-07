@@ -167,7 +167,7 @@ This will not prevent the user from entering invalid Class Input and the BRS Aut
 .. image:: ../_static/BRS-GSInputSection.png
 
 
- **G/S Input** - The G/S Field if selected will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the G/S Input.  The G/S Input will automatically handle the operators **and**, **or**, and **not** that are manually entered by the user between goods and/or services.
+**G/S Input** - The G/S Field if selected will not create any output in either the BRS Autopopulate Display or the Regex Patter Output until there is some value in the G/S Input.  The G/S Input will automatically handle the operators **and**, **or**, and **not** that are manually entered by the user between goods and/or services.
  
 .. note::
  The user may add wildcards and quotes in the input and may also add parentheses and operators for multiple goods/services.  BRS Translator will automatically handle creating the appropriate grouping and syntax from this input.  Outer parentheses are not needed for a combination statement and will be automatically indicated by the display in the input once the input contains a space between two sets of consecutive characters.  Operator terms **and**, **or**, and **not** when entered manually within quotes will not be handled as operators.
